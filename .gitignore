@@ -1,6 +1,12 @@
 # Created by https://www.toptal.com/developers/gitignore/api/windows,unity
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,unity
 
+##Asset##
+/Assets/BloodDecalsAndEffects/
+/Assets/Oculus/
+/Assets/Resources/
+
+
 ### Unity ###
 # This .gitignore file should be placed at the root of your Unity project directory
 #
