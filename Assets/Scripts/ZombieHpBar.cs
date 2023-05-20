@@ -17,7 +17,7 @@ public class ZombieHpBar : MonoBehaviour
     {
         mainCamera = Camera.main;
         
-        HPSlider.value = zs.CurHP/zs.MaxHP;
+        HPSlider.value = zs.GetCurHP()/zs.GetMaxHP();
     }
 
     void Update()
@@ -26,11 +26,12 @@ public class ZombieHpBar : MonoBehaviour
         hpBar.transform.position = monsterHead.transform.position + offset;
         transform.LookAt(transform.position + mainCamera.transform.rotation * Vector3.forward, mainCamera.transform.rotation * Vector3.up);
         handleHP();
+        
        
     }
 
     private void handleHP()
     {
-        HPSlider.value = zs.CurHP/zs.MaxHP;
+        HPSlider.value = zs.GetCurHP()/zs.GetMaxHP();
     }
 }

@@ -7,10 +7,11 @@ public class ZombieState : MonoBehaviour
 { 
     public GameObject particlePrefab; 
     
-    public float MaxHP = 100f;
-    public float CurHP = 100f;
-   
-    
+    private float MaxHP = 100f;
+    private float CurHP = 100f;
+    private float Attack = 100f;
+    public PlayerHP Player;
+
     void Start()
     {
         
@@ -31,13 +32,35 @@ public class ZombieState : MonoBehaviour
             
         Destroy(particle, 1f);
     
-    
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            Player.Damage(Attack);
+            
+        }
+        
+       
     
         if(CurHP <= 0)
         {
             Destroy(gameObject);
         }
        
+    }
+
+    public float GetCurHP()
+    {
+        return CurHP;
+    }
+
+    public void SetCurHP(float HP)
+    {
+        CurHP = HP;
+
+    }
+
+    public float GetMaxHP()
+    {
+        return MaxHP;
     }
 
 
