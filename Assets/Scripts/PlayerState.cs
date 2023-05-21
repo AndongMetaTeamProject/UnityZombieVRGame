@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerState : MonoBehaviour
+public class PlayerHP : MonoBehaviour
 {
     private float MaxHP = 1000f;
     private float CurHP = 1000f;
