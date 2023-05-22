@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Weapon
+  - RoomLight
+  - SamplesInfoPanel
+  - Potion
   layers:
   - Default
   - TransparentFX
@@ -17,7 +20,7 @@ TagManager:
   - Zombie
   - Weapon
   - Player
-  - 
+  - Potion
   - 
   - 
   - 

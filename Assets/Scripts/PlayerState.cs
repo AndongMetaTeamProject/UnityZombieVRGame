@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHP : MonoBehaviour
+public class PlayerState : MonoBehaviour
 {
     private float MaxHP = 1000f;
     private float CurHP = 1000f;
     private float Attack;
     [SerializeField]
     private Slider HPSlider;
+    public HpPotion HpPotion;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,8 @@ public class PlayerHP : MonoBehaviour
             Destroy(gameObject);
             Application.Quit();
         }
+
+
        
     }
 
@@ -54,4 +57,12 @@ public class PlayerHP : MonoBehaviour
         HPSlider.value = CurHP/MaxHP;
     }
     
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Potion"))
+        {
+           CurHP += HpPotion.GetHpPotion();
+          
+        }
+    }
 }

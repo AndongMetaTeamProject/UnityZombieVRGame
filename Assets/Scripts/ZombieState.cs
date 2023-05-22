@@ -12,6 +12,7 @@ public class ZombieState : MonoBehaviour
     private float Attack = 100f;
     public PlayerState Player;
     public KillCount KC;
+    public GameObject HpPotion;
 
     void Start()
     {
@@ -50,9 +51,10 @@ public class ZombieState : MonoBehaviour
             Destroy(gameObject);
            
             KC.IncreaseScore();
-            
+            SpawnItem();
           
         }
+
        
     }
 
@@ -72,6 +74,14 @@ public class ZombieState : MonoBehaviour
         return MaxHP;
     }
 
+    void SpawnItem()
+    {
+        if (HpPotion != null)
+        {
+            Vector3 spawnPosition = transform.position; // 좀비가 죽은 위치에 아이템 생성
+            Instantiate(HpPotion, spawnPosition, Quaternion.identity);
+        }
+    }
 
 
     
