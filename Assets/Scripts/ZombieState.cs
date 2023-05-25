@@ -33,19 +33,22 @@ public class ZombieState : MonoBehaviour
         //GetComponent<ParticleSystem>().Play();
             
         Destroy(particle, 1f);
-    
-        if(collision.gameObject.CompareTag("Player"))
+
+        //좀비가 플레이어 OnCollisionEnter되면 
+        if (collision.gameObject.CompareTag("Player"))
         {
             Player.Damage(Attack);
             
         }
-        if(collision.gameObject.CompareTag("Weapon"))
+
+        //좀비가 무기와 OnCollisionEnter되면 맞는 사운드 
+        if (collision.gameObject.CompareTag("Weapon"))
         {
             CurHP -= 10f;
         }
         
        
-    
+        //좀비 hp가 0이되면 죽을떄 사운드 
         if(CurHP <= 0)
         {
             Destroy(gameObject);
