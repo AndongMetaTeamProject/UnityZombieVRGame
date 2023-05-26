@@ -8,8 +8,11 @@ public class PlayerState : MonoBehaviour
     private float MaxHP = 1000f;
     private float CurHP = 1000f;
     private float Attack;
+    
     [SerializeField]
     private Slider HPSlider;
+  
+    public ZombieState ZS;
     public HpPotion HpPotion;
     // Start is called before the first frame update
     void Start()
@@ -28,7 +31,7 @@ public class PlayerState : MonoBehaviour
             Destroy(gameObject);
             Application.Quit();
         }
-
+       
 
        
     }
@@ -64,5 +67,12 @@ public class PlayerState : MonoBehaviour
            CurHP += HpPotion.GetHpPotion();
           
         }
+       
+        //좀비가 플레이어 OnCollisionEnter되면 
+        if(collision.gameObject.CompareTag("Zombie"))
+        {
+            CurHP -= ZS.GetAttack();
+        }
+
     }
 }
