@@ -13,7 +13,7 @@ public class PlayerState : MonoBehaviour
     private Slider HPSlider;
   
     public ZombieState ZS;
-    public HpPotion HpPotion;
+    public Hp_Potion HpPotion;
     // Start is called before the first frame update
     void Start()
     {
