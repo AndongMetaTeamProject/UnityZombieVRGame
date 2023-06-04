@@ -14,6 +14,10 @@ public class PlayerState : MonoBehaviour
   
     public ZombieState ZS;
     public Hp_Potion HpPotion;
+
+    public AudioClip drink;
+    public AudioClip attack_zombie;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +69,9 @@ public class PlayerState : MonoBehaviour
         if(collision.gameObject.CompareTag("Potion"))
         {
            CurHP += HpPotion.GetHpPotion();
+           audioSource.clip = drink; //물약 먹는 사운드
+           audioSource.Play();
+            
           
         }
        
@@ -72,6 +79,8 @@ public class PlayerState : MonoBehaviour
         if(collision.gameObject.CompareTag("Zombie"))
         {
             CurHP -= ZS.GetAttack();
+            audioSource.clip = attack_zombie; //좀비랑 부딪힐 때 사운드
+            audioSource.Play();
         }
 
     }

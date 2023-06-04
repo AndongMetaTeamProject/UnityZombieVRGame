@@ -3,7 +3,12 @@ guid: 1de05624d68fa47239efe9fcdd245f55
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - particlePrefab: {instanceID: 0}
+  - Player: {instanceID: 0}
+  - KC: {instanceID: 0}
+  - HpPotion: {fileID: 8328899714780771015, guid: 27c8be8390f2d4d5dbac13d0dffecc51,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
