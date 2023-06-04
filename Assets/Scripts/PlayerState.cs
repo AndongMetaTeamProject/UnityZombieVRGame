@@ -56,6 +56,10 @@ public class PlayerState : MonoBehaviour
        
     }
 
+    public void Heal(float HP)
+    {
+        CurHP += HP;
+    }
     public float GetCurHP()
     {
 

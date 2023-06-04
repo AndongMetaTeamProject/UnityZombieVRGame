@@ -29,5 +29,9 @@ public class Hp_Potion : MonoBehaviour
         }
     }
 
+    public void Destoryed()
+    {
+        Destroy(gameObject);
+    }
    
 }

@@ -22,11 +22,14 @@ public class ZombieState : MonoBehaviour
     public AudioClip smash;
     public AudioClip zombie_dead;
 
+
+    private Rigidbody rb;
+
     void Start()
     {
         audioSource = gameObject.AddComponent<AudioSource>();
       
-
+        rb = GetComponent<Rigidbody>();
        
       
     
@@ -43,7 +46,8 @@ public class ZombieState : MonoBehaviour
         
         Vector3 collisionPoint = collision.contacts[0].point;
        
-
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
         
         //좀비가 무기와 OnCollisionEnter되면 맞는 사운드 
         if(collision.gameObject.CompareTag("Weapon"))
