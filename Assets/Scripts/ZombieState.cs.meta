@@ -9,8 +9,6 @@ MonoImporter:
   - KC: {instanceID: 0}
   - HpPotion: {fileID: 8328899714780771015, guid: 27c8be8390f2d4d5dbac13d0dffecc51,
       type: 3}
-  - smash: {fileID: 8300000, guid: b9b0a0ee93a6045d8b794c4710489c09, type: 3}
-  - zombie_dead: {fileID: 8300000, guid: 8dc4807e5a23248e8be4529a6389f912, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
