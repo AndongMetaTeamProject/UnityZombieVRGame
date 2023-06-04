@@ -20,6 +20,9 @@ public class PlayerState : MonoBehaviour
     public AudioClip drink;
     public AudioClip attack_zombie;
 
+    private AudioSource BGM;
+
+    public AudioClip bgm;
    
 
     // Start is called before the first frame update
@@ -29,7 +32,11 @@ public class PlayerState : MonoBehaviour
   
         audioSource = gameObject.AddComponent<AudioSource>();
       
-       
+        BGM = gameObject.AddComponent<AudioSource>();
+
+        BGM.clip = bgm;
+
+        BGM.Play();
         
     }
 
@@ -43,6 +50,7 @@ public class PlayerState : MonoBehaviour
             Destroy(gameObject);
             Application.Quit();
         }
+
        
 
        
