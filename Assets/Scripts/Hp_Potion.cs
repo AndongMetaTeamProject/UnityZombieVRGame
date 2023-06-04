@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hp_Potion : MonoBehaviour
 {
-    private float recoveryAmount = 200f;
+    private float recoveryAmount = 500f;
     // Start is called before the first frame update
     void Start()
     {

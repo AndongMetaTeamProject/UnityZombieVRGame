@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerState : MonoBehaviour
 {
-    private float MaxHP = 1000f;
-    private float CurHP = 1000f;
+    private float MaxHP = 5000f;
+    private float CurHP = 5000f;
     private float Attack;
     
     [SerializeField]
@@ -95,4 +95,7 @@ public class PlayerState : MonoBehaviour
         }
 
     }
+
+  
+
 }

@@ -15,14 +15,14 @@ public class NavMove : MonoBehaviour
     {
         // Cache agent component and destination
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        destination = agent.destination;
+       
     }
     
 
     void Update()
     {
         
-
+        destination = agent.destination;
         // Update destination if the target moves one unit
         if (Vector3.Distance(destination, target.position) > 1.0f)
         {

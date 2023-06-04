@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2999227556744972405}
   - component: {fileID: 3018962400642225727}
   - component: {fileID: 3009127891162936113}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LODB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,9 +94,9 @@ GameObject:
   - component: {fileID: 2999110911951675225}
   - component: {fileID: 2988745250124444321}
   - component: {fileID: 3119641744142756487}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fire_Axe_LOD_PBR
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 2998987198579117929}
   - component: {fileID: 3018948885616328459}
   - component: {fileID: 3009083164042429405}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LODA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 2999340913876835195}
   - component: {fileID: 3019752387108489055}
   - component: {fileID: 3008982197011599033}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LODC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
