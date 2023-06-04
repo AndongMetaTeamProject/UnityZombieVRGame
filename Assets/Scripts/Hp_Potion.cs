@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hp_Potion : MonoBehaviour
+public class HpPotion : MonoBehaviour
 {
     private float recoveryAmount = 200f;
     // Start is called before the first frame update
