@@ -14,13 +14,22 @@ public class ZombieState : MonoBehaviour
     public KillCount KC;
     public GameObject HpPotion;
 
+   
+
+    private AudioSource audioSource; // 첫 번째 오디오 소스
+
+
     public AudioClip smash;
     public AudioClip zombie_dead;
 
-
     void Start()
     {
-        
+        audioSource = gameObject.AddComponent<AudioSource>();
+      
+
+       
+      
+    
     }
 
     // Update is called once per frame
@@ -42,6 +51,7 @@ public class ZombieState : MonoBehaviour
         //좀비가 무기와 OnCollisionEnter되면 맞는 사운드 
         if(collision.gameObject.CompareTag("Weapon"))
         {
+            
             audioSource.clip = smash;
             audioSource.Play();
 
@@ -52,7 +62,7 @@ public class ZombieState : MonoBehaviour
         //좀비 hp가 0이되면 죽을떄 사운드 
         if(CurHP <= 0)
         {
-            audioSource.clip = zombie_dead;
+            audioSource.clip =  zombie_dead;
             audioSource.Play();
 
             Destroy(gameObject);
