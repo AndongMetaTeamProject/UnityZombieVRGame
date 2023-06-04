@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerState : MonoBehaviour
 {
-    private float MaxHP = 1000f;
-    private float CurHP = 1000f;
+    private float MaxHP = 10000f;
+    private float CurHP = 10000f;
     private float Attack;
     
     [SerializeField]
@@ -18,10 +18,22 @@ public class PlayerState : MonoBehaviour
     public AudioClip drink;
     public AudioClip attack_zombie;
 
+
+    private AudioSource audioSource;
+   
+
+
     // Start is called before the first frame update
     void Start()
     {
+
         HPSlider.value = CurHP/MaxHP;
+
+        audioSource = gameObject.AddComponent<AudioSource>();
+      
+
+       
+       
         
     }
 
@@ -69,7 +81,8 @@ public class PlayerState : MonoBehaviour
         if(collision.gameObject.CompareTag("Potion"))
         {
            CurHP += HpPotion.GetHpPotion();
-           audioSource.clip = drink; //물약 먹는 사운드
+          //물약 먹는 사운드
+           audioSource.clip = drink; 
            audioSource.Play();
             
           
@@ -79,7 +92,8 @@ public class PlayerState : MonoBehaviour
         if(collision.gameObject.CompareTag("Zombie"))
         {
             CurHP -= ZS.GetAttack();
-            audioSource.clip = attack_zombie; //좀비랑 부딪힐 때 사운드
+             //좀비랑 부딪힐 때 사운드
+            audioSource.clip = attack_zombie;
             audioSource.Play();
         }
 

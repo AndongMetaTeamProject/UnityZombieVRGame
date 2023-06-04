@@ -1025,7 +1025,7 @@ GameObject:
   - component: {fileID: 7832418335822768183}
   m_Layer: 8
   m_Name: FreeZombie
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1152,6 +1152,8 @@ MonoBehaviour:
   KC: {fileID: 0}
   HpPotion: {fileID: 8328899714780771015, guid: 27c8be8390f2d4d5dbac13d0dffecc51,
     type: 3}
+  smash: {fileID: 8300000, guid: b9b0a0ee93a6045d8b794c4710489c09, type: 3}
+  zombie_dead: {fileID: 8300000, guid: 8dc4807e5a23248e8be4529a6389f912, type: 3}
 --- !u!1 &7832418333725390351
 GameObject:
   m_ObjectHideFlags: 0

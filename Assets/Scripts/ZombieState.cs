@@ -17,10 +17,16 @@ public class ZombieState : MonoBehaviour
     public AudioClip smash;
     public AudioClip zombie_dead;
 
+    private AudioSource audioSource;
+    
+
 
     void Start()
     {
-        
+        audioSource = gameObject.AddComponent<AudioSource>();
+       
+       
+       
     }
 
     // Update is called once per frame
@@ -45,7 +51,7 @@ public class ZombieState : MonoBehaviour
             audioSource.clip = smash;
             audioSource.Play();
 
-            CurHP -= 10f;
+            CurHP -= 50f;
         }
        
        
