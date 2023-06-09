@@ -9,7 +9,7 @@ public class ZombieState : MonoBehaviour
     
     private float MaxHP = 100f;
     private float CurHP = 100f;
-    private float Attack = 10f;
+    private float Attack = 30f;
     public PlayerState Player;
     public KillCount KC;
     public GameObject HpPotion;
